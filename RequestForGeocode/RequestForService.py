@@ -13,8 +13,10 @@ import requests, json
 
 try:
   file=open("coordinate.txt","r+",encoding="utf-8")
-  coordinate=file.readlines() 
+  coordinate=file.readlines()
 
+  file2=open("adress.txt","w",encoding="utf-8")
+  file2.close()
 except FileNotFoundError:
   print("File coordinate.txt not found!")
 
@@ -33,5 +35,12 @@ for lonlat in coordinate:
   if yy["Address"]=="":
     yy["Address"]="Adress not found!"
 
-  print(yy["Address"], ", "+lt)
- 
+  #print(yy["Address"], ", "+lt)
+
+  c=yy["Address"], ", "+lt
+
+  c=str(c)
+  file2=open("adress.txt","a+",encoding="utf-8")
+  file2.write(c+"\n")
+file2.close()
+print("işlem tamamlandı")
