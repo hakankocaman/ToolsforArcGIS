@@ -33,13 +33,20 @@ for lonlat in coordinate:
 
   yy=y["address"]
   if yy["Address"]=="":
-    yy["Address"]="Adress not found!"
+    yy["LongLabel"]="Adress not found!"
 
   #print(yy["Address"], ", "+lt)
 
-  c=yy["Address"], ", "+lt
-
+  c=yy["LongLabel"], ", "+lt
   c=str(c)
+
+  c=str(c.replace("('", ""))
+  c=str(c.replace("', ',", ","))
+
+  c=str(c.replace("')", ","))
+  c=str(c.replace("\n,", ","))
+  
+  print(c)
   file2=open("adress.txt","a+",encoding="utf-8")
   file2.write(c+"\n")
 file2.close()

@@ -1,0 +1,3 @@
+InlandPsych, 255 Terracina Blvd, Redlands, CA, 92373, USA, -117.205525,34.038232\n,
+11800 Nevada St, Redlands, CA, 92373, USA, -117.215678,34.038278\n,
+Adress not found!, 32.836926,39.924984,
