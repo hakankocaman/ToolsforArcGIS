@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolHelp>
+    <tool name="TelegramNotificationTool" displayName="Telegram Notification Tool">
+        <description>
+            The Telegram Notification Tool allows users to send a notification 
+            message to a specific Telegram chat using the Telegram Bot API. 
+            This tool is useful for notifying task completion or providing updates 
+            during long-running geoprocessing workflows.
+        </description>
+        <parameters>
+            <param name="telegram_api_token" displayName="Telegram API Token" type="Required">
+                <explanation>
+                    The API token for the Telegram bot. Obtain this token by creating a bot 
+                    via BotFather on Telegram.
+                </explanation>
+            </param>
+            <param name="chat_id" displayName="Telegram Chat ID" type="Required">
+                <explanation>
+                    The chat ID where the message will be sent. This can be a user ID, 
+                    group ID, or channel ID.
+                </explanation>
+            </param>
+            <param name="message_text" displayName="Notification Message" type="Required">
+                <explanation>
+                    The text of the message to send. This can include custom notifications, 
+                    such as 'Task completed successfully.'
+                </explanation>
+            </param>
+        </parameters>
+        <examples>
+            <example>
+                <syntax>
+                    TelegramNotificationTool(telegram_api_token, chat_id, message_text)
+                </syntax>
+                <description>
+                    Example of sending a message to a Telegram chat.
+                </description>
+            </example>
+        </examples>
+        <credits>
+            This tool is developed for use in ArcGIS Pro workflows and integrates Telegram's 
+            messaging API for automated notifications.
+        </credits>
+        <limitations>
+            This tool requires an active internet connection and a valid Telegram bot API token. 
+            Ensure your Telegram bot is properly configured.
+        </limitations>
+    </tool>
+</toolHelp>
